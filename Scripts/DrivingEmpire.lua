@@ -13,22 +13,22 @@ spawn(function()
                 if type(a) == type(b) and type(b) == type(a) then
                     if typeof(a) == typeof(b) then
                         if a == b and b == a then
-                            if 1 == 2 then repeat until false end
+                            if 1 == 2 then warn("EQ ERR") end
                             return true
                         else
-                            if 2 == 1 then repeat until false end
+                            if 2 == 1 then warn("EQ ERR") end
                             return false
                         end
                     else
-                        if 2 == 3 then repeat until false end
+                        if 2 == 3 then warn("EQ ERR") end
                         return false
                     end
                 else
-                    if 69 ~= 69 then repeat until false end
+                    if 69 ~= 69 then warn("EQ ERR") end
                     return false
                 end
             else
-                repeat until false
+                warn("EQ ERR")
             end
         end
         if EQ(response.Body, expRes .. hash("DrivingEmpire")) then
@@ -37,7 +37,7 @@ spawn(function()
         end
     end)
     if err then
-        repeat until false
+        warn("ERR")
     end
 end)
 
